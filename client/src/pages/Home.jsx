@@ -6,14 +6,14 @@ import image3 from '../assets/layers of earth (1).png';
 import image4 from '../assets/shapes (1).png';
 import image5 from '../assets/Solar System Style (1).png';
 import image6 from '../assets/sounds of animals (1).png';
-
+import bg from '../assets/bg.png'
 
 export default function Home() {
   return (
-    <section className="min-h-screen bg-cover bg-gradient-to-r  from-yellow-200 to-blue-500">
+    <section className="min-h-screen bg-cover bg-gradient-to-r  from-yellow-200 to-blue-500" style={{backgroundImage: `url(${bg})`}}>
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 py-20">
-        <h2 className="text-2xl font-semibold md:text-3xl text-center  mb-4">HEY KIDS!!</h2>
-        <p className="text-center  mb-8">WELCOME TO COGNISAGE</p>
+        <h2 className="text-2xl font-semibold md:text-3xl text-center  mb-4">CogniSage</h2>
+        <p className="text-center text-xl mb-8">Where learning is fun!</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Link to = '/atmosphere'>
           <div className="relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-110">

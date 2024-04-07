@@ -12,6 +12,14 @@ export default function SignUp() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { username, email, password } = formData;
+  
+    // Check if email ends with 'gmail.com' or 'live.com'
+    if (!email.endsWith('@gmail.com') && !email.endsWith('@live.com')) {
+      setError(true);
+      return;
+    }
+  
     try {
       setLoading(true);
       const res = await fetch('/api/auth/signup', {
@@ -23,7 +31,7 @@ export default function SignUp() {
       });
       const data = await res.json();
       setLoading(false);
-      if (data.success == false) {
+      if (data.success === false) {
         setError(true);
         return;
       }
@@ -34,6 +42,31 @@ export default function SignUp() {
       setError(true);
     }
   };
+  
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     setLoading(true);
+  //     const res = await fetch('/api/auth/signup', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     const data = await res.json();
+  //     setLoading(false);
+  //     if (data.success == false) {
+  //       setError(true);
+  //       return;
+  //     }
+  //     setError(false);
+  //     navigate('/sign-in');
+  //   } catch (error) {
+  //     setLoading(false);
+  //     setError(true);
+  //   }
+  // };
   return (
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
@@ -73,7 +106,7 @@ export default function SignUp() {
           <span className="text-blue-500">Sign In</span>
         </Link>
       </div>
-      <p className="text-red-700 mt-5">{error && 'something went wrong!!!'}</p>
+      <p className="text-red-700 mt-5">{error && 'invalid credentials'}</p>
     </div>
   );
 }

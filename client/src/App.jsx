@@ -10,6 +10,7 @@ import Atmosphere from './pages/contentPages/Atmosphere';
 import Earth from './pages/contentPages/Earth';
 import Planets from './pages/contentPages/Planets';
 import PlanetsInfo from './pages/contentPages/PlanetsInfo'
+import AtmosphereQ from './pages/contentPages/quizzes/AtmosphereQ';
 export default function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,8 @@ export default function App() {
         <Route path="/earth" element={<Earth />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/planetsInfo" element={<PlanetsInfo />} />
+        <Route path="/atmosphere-quiz" element={<AtmosphereQ />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
         </Route>

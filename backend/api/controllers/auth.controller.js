@@ -6,18 +6,36 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const signup = async(req, res, next) => {
-    const{username,email,password} = req.body;
-    const hashedPassword = bcryptjs.hashSync(password,10);
-    const newUser = new User({username,email,password:hashedPassword});
-    try{
-        await newUser.save()
-        res.status(201).json({message:"user created succesfully"})
-    }catch(error){
-        next(error)
-    }
+// export const signup = async(req, res, next) => {
+//     const{username,email,password} = req.body;
+//     const hashedPassword = bcryptjs.hashSync(password,10);
+//     const newUser = new User({username,email,password:hashedPassword});
+//     try{
+//         await newUser.save()
+//         res.status(201).json({message:"user created succesfully"})
+//     }catch(error){
+//         next(error)
+//     }
     
-}; 
+// }; 
+export const signup = async (req, res, next) => {
+    const { username, email, password } = req.body;
+
+    // Check if email ends with 'gmail' or 'live'
+    if (!email.endsWith('@gmail.com') && !email.endsWith('@live.com')) {
+        return next(errorHandler(400, 'Invalid email format. Please use a Gmail or Live email address.'));
+    }
+
+    const hashedPassword = bcryptjs.hashSync(password, 10);
+    const newUser = new User({ username, email, password: hashedPassword });
+
+    try {
+        await newUser.save();
+        res.status(201).json({ message: "User created successfully" });
+    } catch (error) {
+        next(error);
+    }
+};
 
 export const signin = async(req,res,next)=>{
     const {email, password}=req.body;
