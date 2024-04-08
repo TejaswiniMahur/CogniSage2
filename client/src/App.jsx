@@ -10,6 +10,9 @@ import Atmosphere from './pages/contentPages/Atmosphere';
 import Earth from './pages/contentPages/Earth';
 import Planets from './pages/contentPages/Planets';
 import PlanetsInfo from './pages/contentPages/PlanetsInfo'
+import Shapes from './pages/contentPages/Shapes';
+import BalancedDiet from './pages/contentPages/BalancedDiet';
+import AnimalSound from './pages/contentPages/AnimalSound';
 import AtmosphereQ from './pages/contentPages/quizzes/AtmosphereQ';
 export default function App() {
   return (
@@ -24,6 +27,9 @@ export default function App() {
         <Route path="/earth" element={<Earth />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/planetsInfo" element={<PlanetsInfo />} />
+        <Route path="/shapes" element={<Shapes />} />
+        <Route path="/balanced-diet" element={<BalancedDiet />} />
+        <Route path="/animal-sound" element={<AnimalSound />} />
         <Route path="/atmosphere-quiz" element={<AtmosphereQ />} />
 
         <Route element={<PrivateRoute />}>
