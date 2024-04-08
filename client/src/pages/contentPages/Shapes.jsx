@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Shapes = () => {
   const shapes = [
     { name: 'Square', color: 'bg-red-500' },
@@ -95,6 +95,13 @@ const Shapes = () => {
           <button onClick={hidePopup} className="bg-red-500 text-white px-4 py-2 rounded-md mt-4">Close</button>
         </div>
       </div>
+      <div className="flex justify-center mt-3 py-4 ">
+      <Link to = '/shapes-quiz'>
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </Link>
+        </div>
     </div>
   );
 }

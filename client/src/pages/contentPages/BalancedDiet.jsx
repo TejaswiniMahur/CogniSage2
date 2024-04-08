@@ -1,7 +1,7 @@
 
 
 import React from "react";
-
+import { Link } from 'react-router-dom';
 const BalancedDiet = () => {
   return (
     <div
@@ -90,7 +90,13 @@ const BalancedDiet = () => {
                 <img src="/thirdpage/minerals.jpg" className="w-[85%] shadow-xl shadow-black"/>
             </div>
       </div>
-
+      <div className="flex justify-center mt-3 py-4 ">
+      <Link to = '/diet-quiz'>
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </Link>
+        </div>
     </div>
   );
 };

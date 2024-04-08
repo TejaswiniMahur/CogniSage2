@@ -1,7 +1,7 @@
 import Card from "../../components/Card2.jsx";
 import { data } from "../../utils/data.jsx";
 
-
+import { Link } from 'react-router-dom';
 export default function Atmosphere() {
   return (
     <div className="flex flex-col font-comic text-white font-semibold ">
@@ -17,6 +17,13 @@ export default function Atmosphere() {
           <Card data={data}/>
         </div>
       ))}
+      <div className="flex justify-center mt-3 py-4 ">
+      <Link to = '/atmosphere-quiz'>
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </Link>
+        </div>
     </div>
   );
 }

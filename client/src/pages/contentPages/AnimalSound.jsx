@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "../../components/Card/Card";
 import { animalData } from "../../meta/animals";
+import { Link } from 'react-router-dom';
 
 function AnimalSound() {
   return (
@@ -13,7 +14,18 @@ function AnimalSound() {
           infoText={animal.infoText}
         />
       ))}
+      
+      <div className="flex justify-center mt-3 py-4 ">
+      <Link to = '/animal-quiz'>
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </Link>
+        </div>
+      
     </div>
+    
+    
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 const Earth = () => {
   return (
     <div className="font-comic text-white font-semibold">
@@ -157,7 +157,13 @@ const Earth = () => {
           </p>
         </div>
       </div>
-
+      <div className="flex justify-center mt-3 py-4 ">
+      <Link to = '/earth-quiz'>
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </Link>
+        </div>
     </div>
   );
 };

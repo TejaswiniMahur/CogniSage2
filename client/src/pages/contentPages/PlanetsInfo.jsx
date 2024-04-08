@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const PlanetsInfo = () => {
   return (
     <body
@@ -7,7 +7,7 @@ const PlanetsInfo = () => {
       style={{ backgroundImage: `url('solar7.jpg')` }}
     >
       {/* done */}
-      <div className="flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="sun flex flex-row justify-center items-center w-[100%] my-[0vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/sun.png" />
         </div>
@@ -25,7 +25,7 @@ const PlanetsInfo = () => {
         </div>
       </div>
       {/* done */}
-      <div className="flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="mercury flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/mercury.png" />
         </div>
@@ -44,7 +44,7 @@ const PlanetsInfo = () => {
         </div>
       </div>
       {/* done */}
-      <div className="flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="venus flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/venus.png" />
         </div>
@@ -62,7 +62,7 @@ const PlanetsInfo = () => {
       </div>
 
       {/* done */}
-      <div className="flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="earth flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/earth.png" />
         </div>
@@ -79,7 +79,7 @@ const PlanetsInfo = () => {
       </div>
 
       {/* done */}
-      <div className="flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="mars flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/mars.png" />
         </div>
@@ -96,7 +96,7 @@ const PlanetsInfo = () => {
       </div>
 
       {/* done */}
-      <div className="flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="jupiter flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/jupiter.png" />
         </div>
@@ -113,7 +113,7 @@ const PlanetsInfo = () => {
       </div>
 
       {/* done */}
-      <div className="flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="saturn flex flex-row justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/saturn.png" />
         </div>
@@ -129,7 +129,7 @@ const PlanetsInfo = () => {
       </div>
 
       {/* done */}
-      <div className="flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
+      <div className="uranus flex flex-row-reverse justify-center items-center w-[100%] my-[5vw] gap-[7vw]">
         <div className="bg-transparent w-[15%] hover:scale-125 transition-all duration-500 ease-in-out">
           <img src="/fifthpage/uranus.png" />
         </div>
@@ -143,7 +143,15 @@ const PlanetsInfo = () => {
           </div>
         </div>
       </div>
+    <Link to = '/planet-quiz'>
+      <div className="flex justify-center mt-8 px-5 py-5">
+        <button className="bg-green-500 hover:bg-green-600 text-white  text-xl py-2 px-4 rounded-full flex items-center">
+          Go to quiz!
+        </button>
+        </div>
+      </Link>
     </body>
+    
   );
 };
 

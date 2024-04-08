@@ -14,6 +14,11 @@ import Shapes from './pages/contentPages/Shapes';
 import BalancedDiet from './pages/contentPages/BalancedDiet';
 import AnimalSound from './pages/contentPages/AnimalSound';
 import AtmosphereQ from './pages/contentPages/quizzes/AtmosphereQ';
+import PlanetsQ from './pages/contentPages/quizzes/PlanetsQ';
+import EarthQ from './pages/contentPages/quizzes/EarthQ';
+import AnimalQ from './pages/contentPages/quizzes/AnimalQ';
+import ShapesQ from './pages/contentPages/quizzes/ShapesQ';
+import DietQ from './pages/contentPages/quizzes/DietQ';
 export default function App() {
   return (
     <BrowserRouter>
@@ -30,7 +35,12 @@ export default function App() {
         <Route path="/shapes" element={<Shapes />} />
         <Route path="/balanced-diet" element={<BalancedDiet />} />
         <Route path="/animal-sound" element={<AnimalSound />} />
+        <Route path="/planet-quiz" element={<PlanetsQ />} />
         <Route path="/atmosphere-quiz" element={<AtmosphereQ />} />
+        <Route path="/earth-quiz" element={<EarthQ />} />
+        <Route path="/animal-quiz" element={<AnimalQ />} />
+        <Route path="/shapes-quiz" element={<ShapesQ />} />
+        <Route path="/diet-quiz" element={<DietQ />} />
 
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
