@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({data}) => {
+const Card2 = ({data}) => {
   
   return (
     <div 
@@ -34,4 +34,4 @@ const Card = ({data}) => {
   )
 }
 
-export default Card
+export default Card2

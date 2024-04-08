@@ -1,0 +1,67 @@
+export const data = [
+    {
+      question: "What shape has four equal sides and four right angles?",
+      option1: "Triangle",
+      option2: "Rectangle",
+      option3: "Circle",
+      option4: "Square",
+      ans: 4,
+    },
+    {
+      question: "Which shape is a polygon with three edges and three vertices?",
+      option1: "Square",
+      option2: "Rectangle",
+      option3: "Triangle",
+      option4: "Pentagon",
+      ans: 3,
+    },
+    {
+      question: "What is a simple closed shape defined as the set of all points in a plane that are at a given distance from a given point?",
+      option1: "Hexagon",
+      option2: "Circle",
+      option3: "Star",
+      option4: "Sphere",
+      ans: 2,
+    },
+    {
+      question: "Which shape is a quadrilateral with four right angles?",
+      option1: "Triangle",
+      option2: "Square",
+      option3: "Pentagon",
+      option4: "Hexagon",
+      ans: 2,
+    },
+    {
+      question: "What is a six-sided polygon called?",
+      option1: "Triangle",
+      option2: "Pentagon",
+      option3: "Rectangle",
+      option4: "Hexagon",
+      ans: 4,
+    },
+    {
+      question: "How many sides does a pentagon have?",
+      option1: "Four",
+      option2: "Five",
+      option3: "Six",
+      option4: "Seven",
+      ans: 2,
+    },
+    {
+      question: "What shape has points projecting from its core?",
+      option1: "Square",
+      option2: "Circle",
+      option3: "Star",
+      option4: "Rectangle",
+      ans: 3,
+    },
+    {
+      question: "Which shape is the surface of a completely round ball?",
+      option1: "Circle",
+      option2: "Star",
+      option3: "Square",
+      option4: "Sphere",
+      ans: 4,
+    }
+  ];
+  
